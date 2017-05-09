@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html id="root" style="height:100%">
+<head>
+    <meta charset="UTF-8">
+    <title>future</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../css/swiper.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <script src="../js/hammer.js"></script>
+    <script src="../js/util.js"></script>
+
+    <script>
+        (function(){
+            var w=document.getElementById("root").clientWidth;
+               var _html=document.getElementById("root");
+             if (w > 640) w = 640;
+            _html.style.fontSize=w/640*100+"px";
+        })()
+
+    </script>
+</head>
+
+<body>
+<div style="display:none;">
+    <audio id="introduction-audio" preload="load" loop="true" src="../mp3/introduction.mp3" controls="controls" hidden="true"></audio>
+    <audio id="btn-audio" preload="load" src="../mp3/btn.mp3" controls="controls" hidden="true"></audio>
+    <audio id="big-scene-audio" preload="load" loop="true" src="../mp3/big_scene.mp3" controls="controls" hidden="true"></audio>
+</div>
+    <div id="container" class="container" style="height: 568px;">
+        <div id="loading" class="page loading-bg" style="display: block;opacity: 1;">
+            <div class="loading"><img src="../images/loading/1.gif"></div>
+        </div>
+        <div id="introductionOnePage" class="page introduction" style="display: none">
+            <!--<div class="logo"></div>-->
+            <div id="audio" class="audio-btn active"></div>
+            <div class="cockpit"></div>
+            <div class="screen screen-1" style="display:none;">
+                <img src="../images/screen-1/4.gif">
+            </div>
+            <div id="text_1" class="text text-1" style="display:block;">
+                <div class="row row-1"></div>
+                <div class="row row-2"></div>
+                <div class="row row-3"></div>
+                <div class="row row-4"></div>
+            </div>
+            <div class="screen screen-2">
+                <img src="../images/screen-2/5.gif">
+            </div>
+            <div id="text_2" class="text text-2" style="display:none">
+                <div class="row row-1"></div>
+                <div class="row row-2"></div>
+                <div class="row row-3"></div>
+                <div class="row row-4"></div>
+            </div>
+        </div>
+        <div id="introductionTwoPage" class="page earth-scene" style="display: none">
+            <!--<div class="logo"></div>-->
+            <div class="audio-btn active"></div>
+            <div id="earth" class="earth "></div>
+            <div class="cockpit"></div>
+            <div id="explore-btn" class="explore-btn" style="display:none; touch-action: pan-y; -webkit-user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></div>
+            <div class="screen screen-3"><img src="../images/screen-3/3.gif"></div>
+        </div>
+        <!--
+         测试时有时会出现三种状况 尤其是有文字 和图片的情况
+         添加 user-select：none 取消被选中
+         -webkit-user-drag:none;取消拖拽
+         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);//取消点击选取背景色
+         Aandroid支持18.0-42.0以上
+         IOs 15.0-27.0以上
+         -->
+        <!--
+        touch-action ：pan-y 可以在父级元素内进行垂直移动的手势操作
+        -->
+        <div  id="introductionThreePage" class="page big-scene" style="display: none;touch-action: pan-y;-webkit-user-select: none;-webkit-user-drag: none;-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+            <div class="logo"></div>
+            <div class="audio-btn active"></div>
+            <div id="scrollX" class="layer" style="transform: translate3d(0px, 0px, 0px); width:57.6rem">
+                <div id="text-in-cloud" class="text-in-cloud" style="display:block"></div>
+                <div id="slide-tips" class="slide-tips" ></div>
+                <div id="uav"><img src="../images/uav/111.gif"></div>
+                <div id="mecha"><img src="../images/mecha/111.gif"></div>
+                <div id="people"><img src="../images/people/111.gif"></div>
+                <div id="plane" class="plane-animate"></div>
+                <div id="energy"><img src="../images/energy/111.gif"></div>
+                <div id="plane2"><img src="../images/plane2/111.gif"></div>
+                <div id="car"><img src="../images/car/111.gif"></div>
+                <div id="people2"><img src="../images/people2/111.gif"></div>
+                <div id="football"><img src="../images/football/111.gif"></div>
+                <div id="cloud-1" class="cloud-animate"></div>
+                <div id="cloud-2" class="cloud-animate"></div>
+                <div id="cloud-3" class="cloud-animate delay1"></div>
+                <div id="cloud-4" class="cloud-animate"></div>
+                <div class="question-text"></div>
+                <div id="feature-btn" class="feature-btn"><img src="../images/feature-btn/111.gif"></div>
+                <div id="tip-1" data-tip="1"  class="tip"><img src="../images/tip/btn.gif"></div>
+                <div id="tip-2" data-tip="2"   class="tip"><img src="../images/tip/btn.gif"></div>
+                <div id="tip-3" data-tip="3"   class="tip"><img src="../images/tip/btn.gif"></div>
+                <div id="tip-4" data-tip="4"  class="tip"><img src="../images/tip/btn.gif"></div>
+                <div id="tip-5" data-tip="5"  class="tip"><img src="../images/tip/btn.gif"></div>
+                <div id="tip-6" data-tip="6"  class="tip"><img src="../images/tip/btn.gif"></div>
+                <div id="tip-7" data-tip="7" class="tip"><img src="../images/tip/btn.gif"></div>
+                <div id="tip-8" data-tip="8" class="tip"><img src="../images/tip/btn.gif"></div>
+            </div>
+        </div>
+    </div>
+    <div id="opacity" class="opacity-bg"></div>
+    <div  class="box tan_ box-1">
+        <img src="../images/tip_1.png">
+        <div class="go-btn"></div>
+    </div>
+    <div class="box tan_ box-2">
+        <img src="../images/tip_2.png">
+        <div class="go-btn"></div>
+    </div>
+    <div class="box tan_ box-3">
+        <img src="../images/tip_3.png">
+        <div class="go-btn"></div>
+    </div>
+    <div class="box tan_ box-4">
+        <img src="../images/tip_4.png">
+        <div class="go-btn"></div>
+    </div>
+    <div class="box tan_ box-5">
+        <img src="../images/tip_5.png">
+        <div class="go-btn"></div>
+    </div>
+    <div class="box tan_ box-6">
+        <img src="../images/tip_6.png">
+        <div class="go-btn"></div>
+    </div>
+    <div class="box tan_ box-7">
+        <img src="../images/tip_7.png">
+        <div class="go-btn"></div>
+    </div>
+    <div class="box tan_ box-8">
+        <img src="../images/tip_8.png">
+        <div class="go-btn"></div>
+    </div>
+    <div class="box">
+        <div id="contentToWrite" style="display:none">
+
+        </div>
+        <div class="terminate"></div>
+    </div>
+    <!--<div class="box box-share">-->
+    <!--<img src="../images/share_content.png">-->
+<!--</div>-->
+</body>
+</html>

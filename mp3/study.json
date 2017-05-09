@@ -1,0 +1,28 @@
+{
+
+  "name": "myApp",
+  "version": "0.0.0",
+  "author" : "simple",
+  "description" : "Nodejs Package json介绍",
+  "keywords" : "javascript, nodejs",
+  "respository" : {
+    "type" :"git",
+    "url" :""
+  },
+
+      "license" : "MIT",
+      /*npm启动项命令处*/
+      "scripts": {
+        "start": "node ./bin/www"
+      },
+      /*如果不打包，将依赖放在此处*/
+      "dependencies": {
+       "react":"",
+       "jquery":""
+      },
+
+      /*安装的依赖放在此处*/
+      "devDependencies": {
+
+      }
+    }

@@ -1,0 +1,432 @@
+body{
+    background-color:black;
+    position:relative;
+    font-size:0.12rem;
+    font-family:'Arial','Microsoft YaHei';
+    overflow:hidden;
+}
+.container {
+    position: relative;
+    margin: 0 auto;
+    width: 6.4rem;
+    overflow: hidden;
+}
+.page {
+    position: absolute;
+    width: 6.4rem;
+    height: 10.27rem;
+    top: 50%;
+    left: 0;
+    margin-top: -5.135rem;
+}
+/*1*/
+.loading-bg {
+    background: url(../images/loading.jpg) no-repeat;
+    background-size: cover;
+}
+.loading {
+    position: absolute;
+    width: 2.37rem;
+    height: 2.37rem;
+    left: 2.02rem;
+    top: 3.25rem;
+}
+/*2*/
+.introduction {
+    background: url(../images/introduction_bg.jpg) no-repeat;
+    background-size: cover;
+}
+
+/*.logo {*/
+    /*background: url(../images/loading/logo.png) no-repeat;*/
+    /*background-size: cover;*/
+    /*position: fixed;*/
+    /*width: 2rem;*/
+    /*height: 0.8rem;*/
+    /*top: 0;*/
+    /*z-index: 99;*/
+/*}*/
+
+.audio-btn.active {
+    background-position: 0 -0.5rem;
+}
+.audio-btn {
+    background: url(../images/audio_icon.png) no-repeat;
+    background-size: 0.5rem auto;
+    position: fixed;
+    width: 0.5rem;
+    height: 0.5rem;
+    top: 0.18rem;
+    left: 50%;
+    margin-left: 2.5rem;
+    z-index: 20;
+}
+
+.page .cockpit {
+    background: url(../images/cockpit.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 6.4rem;
+    height: 10.27rem;
+    top: 0;
+    left: 0;
+}
+
+.page .screen {
+    position: absolute;
+    width: 1.68rem;
+    height: 0.97rem;
+    top: 8.5rem;
+    left: 2.4rem;
+}
+
+.introduction .text {
+    position: absolute;
+    width: 2.6rem;
+    height: 1.8rem;
+    left: 1.9rem;
+    top: 6rem;
+}
+.introduction .text .row-1 {
+    background-position: 0 0;
+    height: 0.4rem;
+}
+.introduction .text-1 .row {
+    background: url(../images/text_1.png) no-repeat;
+    background-size: 2.6rem auto;
+    width: 2.6rem;
+}
+.introduction .text .row-2 {
+    background-position: 0 -0.4rem;
+    height: 0.4rem;
+}
+.introduction .text .row-3 {
+    background-position: 0 -0.8rem;
+    height: 0.5rem;
+}
+.introduction .text .row-4 {
+    background-position: 0 -1.3rem;
+    height: 0.5rem;
+}
+.introduction .text-2 {
+    width: 3.2rem;
+    left: 1.6rem;
+}
+.introduction .text .row-1 {
+    background-position: 0 0;
+    height: 0.4rem;
+}
+.introduction .text-2 .row {
+    background: url(../images/text_2.png) no-repeat;
+    background-size: 3.2rem auto;
+    width: 3.2rem;
+}
+.introduction .text .row-2 {
+    background-position: 0 -0.4rem;
+    height: 0.4rem;
+}
+.introduction .text .row-3 {
+    background-position: 0 -0.8rem;
+    height: 0.5rem;
+}
+.introduction .text .row-4 {
+    background-position: 0 -1.3rem;
+    height: 0.5rem;
+}
+
+/*3*/
+.earth-scene {
+    background: url(../images/earth_bg.jpg) no-repeat;
+    background-size: cover;
+}
+/*
+ 第三个参数：animate-function (animation-timing-function)：
+运动方式（动画方式）的贝赛尔曲线，可取值为：ease、ease-in、ease-out、linear、ease-in-out、cubic-bezier(num1,num2,num3,num4)。
+第四个参数：delay (animation-delay)：
+动画延迟执行的时间，单位也是s或者ms，值得注意的是，即使延迟时间为0，也必须加上时间单位，如果写成直接写成0，在Chrome和Safari(webkit)下是没问题的，但是在FF(gecko)下无效。
+第五个参数：times (animation-iteration-count)：
+动画循环执行的次数，无单位，infinite为无限循环。
+第六个参数：iteration (animation-direction)：
+如果动画循环，循环的方式是：alternate(偶数次向前播放，奇数次向后播放)、normal(每次都向前播放)。
+第七个参数：final (animation-fill-mode)：
+动画的最后（达到100%）时的状态，取值有：backward（回到初始状态）、forwards（停在最终状态）、none、both。
+*/
+.earth-animate {
+    -webkit-backface-visibility: visible;
+    -webkit-transform-origin: center center;
+    -webkit-animation: name 1s 0s 1 linear normal forwards;
+}
+@-webkit-keyframes name {
+    0% {
+        -webkit-transform: scaleX(1) scaleY(1);
+    }
+    100% {
+        -webkit-transform: scaleX(3.3) scaleY(3.3);
+    }
+}
+.earth-scene .earth {
+    background: url(../images/earth.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 3.35rem;
+    height: 3.35rem;
+    left: 1.53rem;
+    top: 2.85rem;
+}
+
+.earth-scene .explore-btn {
+    background: url(../images/explore_btn.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 2.3rem;
+    height: 1rem;
+    left: 2.05rem;
+    top: 6.75rem;
+}
+/*4*/
+.big-scene .layer {
+    background: url(../images/scene.jpg) no-repeat;
+    background-size: 57.6rem auto;
+    position: relative;
+    width: 57.6rem;
+    height: 10.27rem;
+}
+
+.layer .text-in-cloud {
+    background: url(../images/text_in_cloud.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 6.4rem;
+    height: 3rem;
+    left: 0;
+    top: 1.35rem;
+}
+
+.layer .slide-tips {
+    background: url(../images/slide_tips.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 6.4rem;
+    height: 1.8rem;
+    left: 0;
+    bottom: 0;
+}
+
+#uav {
+    position: absolute;
+    width: 7.61rem;
+    height: 1.06rem;
+    left: 1.44rem;
+    top: 5.07rem;
+}
+
+#mecha {
+    position: absolute;
+    width: 1.46rem;
+    height: 2.88rem;
+    left: 13.63rem;
+    top: 5.53rem;
+}
+
+#energy {
+    position: absolute;
+    width: 1.56rem;
+    height: 0.54rem;
+    left: 25.76rem;
+    top:6.97rem;
+}
+#car {
+    position: absolute;
+    width: 2.14rem;
+    height: 3rem;
+    left: 39.74rem;
+    top: 4.94rem;
+}
+#people {
+    position: absolute;
+    width: 2.26rem;
+    height: 3.07rem;
+    left: 18rem;
+    top: 6.88rem;
+}
+#plane2 {
+    position: absolute;
+    width: 4.2rem;
+    height: 3rem;
+    left: 32.12rem;
+    top: 1.36rem;
+}
+
+#people2 {
+    position: absolute;
+    width: 0.81rem;
+    height: 1.94rem;
+    left: 42.14rem;
+    top: 5.6rem;
+}
+
+#football {
+    position: absolute;
+    width: 0.3rem;
+    height: 0.3rem;
+    left: 44.58rem;
+    top: 7.6rem;
+}
+#cloud-1 {
+    background: url(../images/cloud_1.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 2.4rem;
+    height: 1.2rem;
+    left: 21rem;
+    top: 8.4rem;
+}
+
+#cloud-2 {
+    background: url(../images/cloud_2.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 2.4rem;
+    height: 1.2rem;
+    left: 28.5rem;
+    top: 7.8rem;
+}
+
+#cloud-3 {
+    background: url(../images/cloud_3.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 9rem;
+    height: 3rem;
+    left: 35rem;
+    top: 2.6rem;
+}
+.delay1 {
+    animation-delay: 1s;
+    -webkit-animation-delay: 1s;
+}
+.cloud-animate {
+    -webkit-backface-visibility: visible;
+    -webkit-transform-origin: center center;
+    -webkit-animation: cloud 4s 0s infinite linear normal none;
+}
+#cloud-4 {
+    background: url(../images/cloud_4.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 7.2rem;
+    height: 2rem;
+    left: 37rem;
+    top: 8.27rem;
+}
+
+.question-text {
+    background: url(../images/question_text.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 4.5rem;
+    height: 0.5rem;
+    left: 52.1rem;
+    top: 8.6rem;
+}
+
+.feature-btn {
+    background: url(../images/feature_btn.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 2.6rem;
+    height: 1.2rem;
+    left: 53.08rem;
+    top: 8.9rem;
+}
+.tip {
+    position: absolute;
+    width: 0.9rem;
+    height: 0.9rem;
+}
+#tip-1 {
+    left: 8.45rem;
+    top: 5.4rem;
+}
+#tip-2 {
+    left: 12.85rem;
+    top: 6.75rem;
+}
+#tip-3 {
+    left: 17.3rem;
+    top: 7.85rem;
+}
+#tip-4 {
+    left: 28.38rem;
+    top: 2.92rem;
+}
+#tip-5 {
+    left: 28.1rem;
+    top: 8.22rem;
+}
+#tip-6 {
+    left: 34.75rem;
+    top: 2.92rem;
+}
+#tip-7 {
+    left: 39rem;
+    top: 6rem;
+}
+#tip-8 {
+    left: 46.05rem;
+    top: 7.45rem;
+}
+/*遮罩层*/
+.opacity-bg {
+    background-color: rgba(0,0,0,0.8);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 999;
+    display: none;
+}
+/*点选弹出框*/
+.box {
+    background: url(../images/box_bg.png) no-repeat;
+    background-size: 6.4rem auto;
+    position: fixed;
+    width: 6.4rem;
+    height: 5.8rem;
+    left: 50%;
+    top: 50%;
+    margin-top: -2.9rem;
+    margin-left: -3.2rem;
+    z-index: 1000;
+    display: none;
+}
+/*继续探索按钮*/
+.box .go-btn {
+    background: url(../images/go_btn.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 2.1rem;
+    height: 0.9rem;
+    left: 2.12rem;
+    bottom: 0.2rem;
+}
+.box .terminate {
+    background: url(../images/go_btn.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 2.1rem;
+    height: 0.9rem;
+    left: 2.12rem;
+    bottom: 0.2rem;
+}
+/**/
+.box-share {
+    background: none;
+    width: 6.4rem;
+    height: 4.8rem;
+    top: 0;
+    margin-top: 0;
+}
+
